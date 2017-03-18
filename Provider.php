@@ -6,15 +6,21 @@ use SocialiteProviders\Manager\OAuth2\User;
 use Laravel\Socialite\Two\ProviderInterface;
 use SocialiteProviders\Manager\OAuth2\AbstractProvider;
 
-class YibanProvider extends AbstractProvider implements ProviderInterface
+class Provider extends AbstractProvider implements ProviderInterface
 {
     /**
      * Unique Provider Identifier.
      */
     const IDENTIFIER = 'YIBAN';
 
+    /**
+     * @var string
+     */
     protected $openId;
 
+    /**
+     * {@inheritdoc}.
+     */
     protected $scopes = ['snsapi_userinfo'];
 
     /**
